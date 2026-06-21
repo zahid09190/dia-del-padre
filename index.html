@@ -1,0 +1,304 @@
+html = f'''<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Día del Padre — Para Ti, Papá ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== REPRODUCTOR DE MÚSICA ===== -->
+  <div id="music-player" onclick="toggleMusic()">
+    <span class="music-icon" id="music-icon">🎵</span>
+    <span class="music-label">Viejo, Mi Querido Viejo</span>
+    <button class="music-btn" id="play-btn">▶</button>
+  </div>
+
+  <!-- Para agregar música: pon tu archivo MP3 en la misma carpeta y descomenta la línea de abajo -->
+  <audio id="bgm" loop>
+    <source src="audio/viejo_mi_querido_viejo.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ===== NAVEGACIÓN ===== -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">💛 Para Papá</div>
+      <ul class="nav-links">
+        <li><a href="#inicio">🏠 Inicio</a></li>
+        <li><a href="#historia">📖 Historia</a></li>
+        <li><a href="#galeria">📸 Galería</a></li>
+        <li><a href="#admiro">⭐ Admiro</a></li>
+        <li><a href="#ensenanzas">🎓 Enseñanzas</a></li>
+        <li><a href="#secretos">💌 Secretos</a></li>
+        <li><a href="#premio">🏆 Premio</a></li>
+        <li><a href="#video">🎥 Video</a></li>
+        <li><a href="#carta">❤️ Carta</a></li>
+        <li><a href="#final">🎉 Feliz Día</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div id="lightbox">
+    <span class="lb-close" onclick="closeLightbox()">&times;</span>
+    <img id="lb-img" src="" alt="">
+    <div class="lb-caption" id="lb-caption"></div>
+  </div>
+
+  <!-- ===== SECCIÓN: INICIO ===== -->
+  <section id="inicio" class="section">
+    <div class="floating-hearts-container" id="fhc"></div>
+    <div class="hero-photo-frame">
+      <img src="imagenes/4 imagen.jpeg" alt="Papá">
+    </div>
+    
+    <span class="hero-tag">✦ Día del Padre 2025 ✦</span>
+    <h1 class="hero-title">Para Ti,<br><span class="gold">Mi Querido Viejo</span></h1>
+    <p class="hero-subtitle">
+      Hoy no quiero regalarte algo material.<br>
+      Quiero regalarte algo hecho con el corazón.
+    </p>
+    <div class="hero-badge">♥ &nbsp; Este homenaje es solo para ti &nbsp; ♥</div>
+  </section>
+
+  <!-- ===== SECCIÓN: NUESTRA HISTORIA ===== -->
+  <section id="historia" class="section section-alt">
+    <div class="section-inner">
+      <span class="section-label">📖 Nuestra Historia</span>
+      <h2 class="section-title">Momentos que nos<br>definen juntos</h2>
+      <div class="section-divider"></div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">El comienzo</div>
+          <div class="timeline-title">Llegué al mundo</div>
+          <div class="timeline-desc">Desde ese primer momento, me convertiste en tu prioridad. Tu vida cambió para siempre — y la mía también.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">Los primeros años</div>
+          <div class="timeline-title">Aprendiendo juntos</div>
+          <div class="timeline-desc">Me enseñaste a caminar, a levantarme cuando me caía, a no tenerle miedo al mundo porque tú siempre estabas ahí.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">Tradición y cultura</div>
+          <div class="timeline-title">Nuestra identidad folklórica</div>
+          <div class="timeline-desc">Vestiste con orgullo el traje de nuestra danza. Me enseñaste que nuestras raíces andinas son nuestra mayor fuerza.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">Viajes y aventuras</div>
+          <div class="timeline-title">Explorando el mundo juntos</div>
+          <div class="timeline-desc">Desde los lagos andinos hasta Lima, cada paseo contigo fue una lección de vida.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">Hoy</div>
+          <div class="timeline-title">Tu legado vive en mí</div>
+          <div class="timeline-desc">Todo lo que soy y lo que seré te lo debo a ti. Esta página es mi manera de decirte: gracias.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN: GALERÍA ===== -->
+  <section id="galeria" class="section">
+    <div class="section-inner">
+      <span class="section-label">📸 Galería de Recuerdos</span>
+      <h2 class="section-title">Momentos que<br>guarda el corazón</h2>
+      <div class="section-divider"></div>
+      <div class="gallery-grid">
+
+    <div class="gallery-item">
+      <img src="imagenes/1 imagen.jpeg" alt="Foto 1">
+      <div class="gallery-caption">Recuerdo 1</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="imagenes/2 imagen.jpeg" alt="Foto 2">
+      <div class="gallery-caption">Recuerdo 2</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="imagenes/3 imagen.jpeg" alt="Foto 3">
+      <div class="gallery-caption">Recuerdo 3</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="imagenes/4 imagen.jpeg" alt="Foto 4">
+      <div class="gallery-caption">Recuerdo 4</div>
+    </div>
+    
+    <div class="gallery-item">
+      <img src="imagenes/5 imagen.jpeg" alt="Foto 5">
+      <div class="gallery-caption">Recuerdo 5</div>
+    </div>
+    
+    <div class="gallery-item">
+      <img src="imagenes/6 imagen.jpeg" alt="Foto 6">
+      <div class="gallery-caption">Recuerdo 6</div>
+    </div>
+        
+    <div class="gallery-item">
+      <img src="imagenes/7 imagen.jpeg" alt="Foto 7">
+      <div class="gallery-caption">Recuerdo 7</div>
+    </div>
+        
+    <div class="gallery-item">
+      <img src="imagenes/8 imagen.jpeg" alt="Foto 8">
+      <div class="gallery-caption">Recuerdo 8</div>
+    </div>
+        
+    <div class="gallery-item">
+      <img src="imagenes/9 imagen.jpeg" alt="Foto 9">
+      <div class="gallery-caption">Recuerdo 9</div>
+    </div>
+        
+    <div class="gallery-item">
+      <img src="imagenes/10 imagen.jpeg" alt="Foto 10">
+      <div class="gallery-caption">Recuerdo 10</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="imagenes/11 imagen.jpeg" alt="Foto 11">
+      <div class="gallery-caption">Recuerdo 11</div>
+    </div>
+
+     <div class="gallery-item">
+      <img src="imagenes/12 imagen.jpeg" alt="Foto 12">
+      <div class="gallery-caption">Recuerdo 12</div>
+    </div>
+    
+</div>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN: LO QUE ADMIRO ===== -->
+  <section id="admiro" class="section section-alt">
+    <div class="section-inner">
+      <span class="section-label">⭐ Lo que admiro de ti</span>
+      <h2 class="section-title">Las cualidades que<br>hacen de ti mi héroe</h2>
+      <div class="section-divider"></div>
+      <div class="cards-grid">
+        <div class="quality-card"><span class="quality-icon">💪</span><div class="quality-name">Tu esfuerzo</div><div class="quality-desc">Nunca te vi rendirte. Cada día te levantabas para darnos lo mejor.</div></div>
+        <div class="quality-card"><span class="quality-icon">🎯</span><div class="quality-name">Tu honestidad</div><div class="quality-desc">Siempre con la verdad por delante, sin importar lo difícil que fuera.</div></div>
+        <div class="quality-card"><span class="quality-icon">🦁</span><div class="quality-name">Tu valentía</div><div class="quality-desc">Te enfrentaste a cada obstáculo sin mostrar miedo, protegiendo a tu familia.</div></div>
+        <div class="quality-card"><span class="quality-icon">🤝</span><div class="quality-name">Tu responsabilidad</div><div class="quality-desc">Nunca fallaste. Siempre cumpliste con tu palabra y con tu familia.</div></div>
+        <div class="quality-card"><span class="quality-icon">❤️</span><div class="quality-name">Tu amor familiar</div><div class="quality-desc">Todo lo que hiciste, lo hiciste por amor a nosotros. Eso lo supe siempre.</div></div>
+        <div class="quality-card"><span class="quality-icon">🌱</span><div class="quality-name">Tu fortaleza</div><div class="quality-desc">En los momentos más difíciles, fuiste nuestra roca, nuestro refugio.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN: ENSEÑANZAS ===== -->
+  <section id="ensenanzas" class="section">
+    <div class="section-inner">
+      <span class="section-label">🎓 Todo lo que me enseñaste</span>
+      <h2 class="section-title">Las lecciones que<br>llevo en el alma</h2>
+      <div class="section-divider"></div>
+      <div class="teachings-grid">
+        <div class="teaching-item"><div class="teaching-num">01</div><div class="teaching-text"><strong>Nunca rendirme</strong>Que los obstáculos son pasajeros, pero la perseverancia construye el camino.</div></div>
+        <div class="teaching-item"><div class="teaching-num">02</div><div class="teaching-text"><strong>Trabajar con esfuerzo</strong>Que nada llega solo, que todo tiene su precio en dedicación y sacrificio.</div></div>
+        <div class="teaching-item"><div class="teaching-num">03</div><div class="teaching-text"><strong>Ser respetuoso</strong>A tratar a las personas con dignidad, sin importar quiénes sean o qué tengan.</div></div>
+        <div class="teaching-item"><div class="teaching-num">04</div><div class="teaching-text"><strong>Valorar la familia</strong>Que al final del día, lo más importante siempre serán las personas que amamos.</div></div>
+        <div class="teaching-item"><div class="teaching-num">05</div><div class="teaching-text"><strong>Cumplir la palabra</strong>Que el honor de un hombre está en lo que promete y en lo que cumple.</div></div>
+        <div class="teaching-item"><div class="teaching-num">06</div><div class="teaching-text"><strong>Amar nuestras raíces</strong>A sentirme orgulloso de nuestra cultura, nuestra tierra y nuestra gente andina.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN: SECRETOS ===== -->
+  <section id="secretos" class="section">
+    <div class="section-inner text-center">
+      <span class="section-label">💌 Cosas que nunca te dije</span>
+      <h2 class="section-title">Palabras del corazón<br>que guardan silencio</h2>
+      <div class="section-divider center-divider"></div>
+      <div class="secret-phrases">
+        <div class="secret-phrase">Gracias por cada <span class="gold-text">sacrificio</span> que hiciste en silencio para que yo pudiera sonreír.</div>
+        <div class="secret-phrase">Gracias por <span class="gold-text">creer en mí</span> incluso cuando yo mismo no lo hacía.</div>
+        <div class="secret-phrase">Gracias por estar <span class="gold-text">cuando más te necesité</span>, aunque quizás nunca te lo supe decir.</div>
+        <div class="secret-phrase">Te admiro más de lo que imaginas.<br>Eres mi <span class="gold-text">ejemplo de vida.</span></div>
+        <div class="secret-phrase">Ojalá algún día pueda ser <span class="gold-text">la mitad del hombre</span> que eres tú.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN: PREMIO ===== -->
+  <section id="premio" class="section section-alt text-center">
+    <div class="award-container">
+      <span class="award-medal">🏆</span>
+      <span class="section-label" style="display:block;text-align:center;margin-bottom:10px">🏆 Reconocimiento especial</span>
+      <h2 class="section-title award-title">El Mejor Papá<br>del Mundo</h2>
+      <div class="award-cert">
+        <p class="award-text">
+          Por su amor incondicional,<br>
+          su esfuerzo sin límites,<br>
+          su valentía ante cada desafío<br>
+          y por ser el pilar de esta familia...<br><br>
+          <span class="award-highlight">Se otorga este reconocimiento<br>con el mayor orgullo del corazón.</span>
+        </p>
+        <p class="award-sub">— CON AMOR, TU FAMILIA —</p>
+      </div>
+      <p class="award-stars">✦ ✦ ✦</p>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN: VIDEO ===== -->
+  <section id="video" class="section text-center">
+    <div class="section-inner">
+      <span class="section-label">🎥 Video Especial</span>
+      <h2 class="section-title">Un mensaje<br>en imágenes</h2>
+      <div class="section-divider center-divider"></div>
+      <div class="video-placeholder">
+        <span class="video-icon">🎬</span>
+        <p>Aquí puedes insertar un video especial para papá.<br>
+        Reemplaza este bloque con una etiqueta <code>&lt;video&gt;</code> o un embed de YouTube.</p>
+        <!-- EJEMPLO: <iframe width="100%" height="400" src="https://www.youtube.com/embed/TU_ID" frameborder="0" allowfullscreen></iframe> -->
+        <!-- EJEMPLO: <video width="100%" controls><source src="video_papa.mp4" type="video/mp4"></video> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN: CARTA ===== -->
+  <section id="carta" class="section section-light">
+    <div class="section-inner">
+      <span class="section-label">❤️ Carta para Papá</span>
+      <h2 class="section-title">Desde lo más<br>profundo del corazón</h2>
+      <div class="section-divider"></div>
+      <div class="letter-paper">
+        <div class="letter-date">Perú, Día del Padre — 2025</div>
+        <div class="letter-salutation">Querido Papá,</div>
+        <div class="letter-body">
+          <p>Nunca es fácil encontrar las palabras correctas para decirle a alguien lo mucho que significa para uno. Pero hoy, en tu día, quiero intentarlo con todo el amor que tengo.</p>
+          <p>Gracias por cada madrugada que saliste a trabajar para que a nosotros no nos faltara nada. Gracias por cada "sí se puede" que me dijiste cuando yo dudaba. Gracias por cada momento en que pusiste a la familia primero, antes que a ti mismo.</p>
+          <p>He crecido viéndote superar cosas que habrían doblegado a cualquiera. Y en cada una de esas batallas, aprendí lo que significa ser fuerte, ser responsable, ser un hombre de bien.</p>
+          <p>No siempre te lo he dicho, y quizás no siempre lo expresé como debí. Pero sepas que cada logro que consiga en mi vida llevará una parte de ti. Porque tú me enseñaste el camino.</p>
+          <p>Hoy quiero que sepas que me siento el hijo más afortunado del mundo. No porque tengamos todo, sino porque te tengo a ti.</p>
+          <p>Te quiero, papá. Más de lo que las palabras pueden decir.</p>
+        </div>
+        <div class="letter-signature">Con todo mi amor ❤️</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN: FINAL ===== -->
+  <section id="final" class="section text-center">
+    <div class="confetti-container" id="confetti-container"></div>
+    <div class="section-inner final-inner">
+      <span class="section-label" style="display:block;text-align:center;margin-bottom:20px">🎉 Feliz Día del Padre</span>
+      <p class="final-message">
+        Gracias por cada esfuerzo, cada consejo, cada sacrificio y cada momento compartido.
+        Siempre serás mi héroe, mi ejemplo y mi orgullo.
+      </p>
+      <div class="final-heart">❤️</div>
+      <div class="final-signature">¡Feliz Día del Padre, Papá!</div>
+      <p class="final-sub">— Te quiero infinitamente —</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>'''
